@@ -2,3 +2,4 @@
 env
 src/firebase/firebase_config.py
 docker-compose.yml
+fly.toml

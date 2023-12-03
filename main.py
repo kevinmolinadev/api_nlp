@@ -5,6 +5,6 @@ app = FastAPI()
 
 @app.get("/")
 async def init():
-    return {"Team":"DragonDevs"}
+    return {"team":"DragonDevs"}
 app.include_router(Routes.questions)
 
