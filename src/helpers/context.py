@@ -12,6 +12,7 @@ def extract_context(data, keywords):
     for item in data:
         lower_question = str(item.question).lower()
         keyword_matches = sum(keyword in lower_question for keyword in keywords)
+        if keyword_matches == 0: continue
         threshold = len(keywords) -1 
         if keyword_matches >= threshold:
             context += f"{str(item.context).strip()}.\n\n\n"
