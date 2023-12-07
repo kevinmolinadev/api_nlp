@@ -8,12 +8,10 @@ this method receives an array with the contexts, it also receives the keyword to
 ```
 """
 def extract_context(data, keywords):
-    context = ''
+    context = []
     for item in data:
         lower_question = str(item.question).lower()
         keyword_matches = sum(keyword in lower_question for keyword in keywords)
         if keyword_matches == 0: continue
-        threshold = len(keywords) -1 
-        if keyword_matches >= threshold:
-            context += f"{str(item.context).strip()}.\n\n\n"
+        context.append(f"{str(item.context).strip()}")
     return context
