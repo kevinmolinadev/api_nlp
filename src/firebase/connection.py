@@ -17,4 +17,3 @@ def get_questions():
         question = Question.from_dict(item.to_dict())
         questions.append(question)
     return questions
-

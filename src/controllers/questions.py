@@ -12,7 +12,6 @@ def answer_question(question):
     [is_greeting, greeting] = get_greetings(question);
     if is_greeting is True: return {"question":question,"result":f"¡{greeting}! Soy A.V.U, tu Asistente Virtual Univalle. Estoy aquí para ayudarte en lo que necesites."}  
     keywords = extract_keywords(question)
-    print(keywords)
     if keywords is []: return {"question":question,"result":"😕 ¡Ups! No entendí bien la pregunta. ¿Podrías reformularla, por favor?"}
     context = validate_context(keywords)
     if context is []: return {"question":question,"result":"🌟 ¡Gracias por tu pregunta! Sin embargo, no tengo información sobre ese tema. ¿Puedes preguntar algo diferente?"}
